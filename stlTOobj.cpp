@@ -13,7 +13,12 @@ facetObj.readFacet();
 facetObj.writeFacet();
 return 0;	
 }
-
+void pushElement(vector<double> &vect1,double x,double y,double z)
+{
+    vect1.push_back(x);
+    vect1.push_back(y);
+    vect1.push_back(z);   
+}
 void vertexAndNormal::readVertexAndNormal()
 {
     ifstream if_obj;
@@ -38,16 +43,18 @@ void vertexAndNormal::readVertexAndNormal()
                 }
                 if (isUnique == 0)
                 {
-                    vectNormal.push_back(x);
-                    vectNormal.push_back(y);
-                    vectNormal.push_back(z);
+                    pushElement(vectNormal,x,y,z);
+                   // vectNormal.push_back(x);
+                  //  vectNormal.push_back(y);
+                   // vectNormal.push_back(z);
                 }
             }
             else
             {
-                vectNormal.push_back(x);
-                vectNormal.push_back(y);
-                vectNormal.push_back(z);
+                pushElement(vectNormal,x,y,z);
+              //  vectNormal.push_back(x);
+               // vectNormal.push_back(y);
+               // vectNormal.push_back(z);
             }
             normalPos++;
         }
@@ -67,16 +74,18 @@ void vertexAndNormal::readVertexAndNormal()
                 }
                 if (isUnique == 0)
                 {
-                    vectVertex.push_back(x);
-                    vectVertex.push_back(y);
-                    vectVertex.push_back(z);
+                    pushElement(vectVertex,x,y,z);
+                    //vectVertex.push_back(x);
+                    //vectVertex.push_back(y);
+                    //vectVertex.push_back(z);
                 }
             }
             else
             {
-                vectVertex.push_back(x);
-                vectVertex.push_back(y);
-                vectVertex.push_back(z);
+                pushElement(vectVertex,x,y,z);
+               // vectVertex.push_back(x);
+                //vectVertex.push_back(y);
+                //vectVertex.push_back(z);
             }
             vertexPos++;
             // cout << "v"  << " " << x << " " << y << " " << z << endl;

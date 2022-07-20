@@ -24,6 +24,15 @@ public:
     void readFacet();
     void writeFacet();
 } ;
+
+
+string mergeStrings1(double d1,double d2,double d3){
+            string s1 = to_string(d1);
+            string s2 = to_string(d2);
+            string s3 = to_string(d3);
+            string s4 = s1 + s2 + s3;
+            return s4;
+}
 void facet::readFacet()
 {
     ifstream if_obj;
@@ -36,10 +45,11 @@ void facet::readFacet()
         if (s == "normal")
         {
         	if_obj>>d1>>d2>>d3; 
-            string s1 = to_string(d1);
-            string s2 = to_string(d2);
-            string s3 = to_string(d3);
-            string s4 = s1 + s2 + s3;
+            string s4=mergeStrings1(d1,d2,d3); 
+          //  string s1 = to_string(d1);
+          //  string s2 = to_string(d2);
+          //  string s3 = to_string(d3);
+          //  string s4 = s1 + s2 + s3;
           int temp=0;
           if(posNormal>0)
           {
@@ -63,10 +73,11 @@ void facet::readFacet()
         if (s == "vertex")
         {
         	if_obj>>d1>>d2>>d3; 
-            string s1 = to_string(d1);
-            string s2 = to_string(d2);
-            string s3 = to_string(d3);
-            string s4 = s1 + s2 + s3;
+            string s4=mergeStrings1(d1,d2,d3); 
+          //  string s1 = to_string(d1);
+          //  string s2 = to_string(d2);
+          //  string s3 = to_string(d3);
+          //  string s4 = s1 + s2 + s3;
           //  cout<<s4<<endl;
           int temp=0;
           if(posVertex>0)
@@ -104,10 +115,11 @@ void facet::writeFacet()
         {
         	of<<"\nf ";
         	if_obj>>d1>>d2>>d3; 
-            string s1 = to_string(d1);
-            string s2 = to_string(d2);
-            string s3 = to_string(d3);
-            string s4 = s1 + s2 + s3;
+            string s4=mergeStrings1(d1,d2,d3); 
+          //  string s1 = to_string(d1);
+          //  string s2 = to_string(d2);
+          //  string s3 = to_string(d3);
+          //  string s4 = s1 + s2 + s3;
             for(int i=0;i<vectNormal.size();i++)
 			{
 				if(vectNormal[i]==s4){posn=i+1;}
@@ -116,10 +128,11 @@ void facet::writeFacet()
         if (s == "vertex")
         {
         	if_obj>>d1>>d2>>d3; 
-            string s1 = to_string(d1);
-            string s2 = to_string(d2);
-            string s3 = to_string(d3);
-            string s4 = s1 + s2 + s3;
+            string s4=mergeStrings1(d1,d2,d3); 
+          //  string s1 = to_string(d1);
+          //  string s2 = to_string(d2);
+          //  string s3 = to_string(d3);
+          //  string s4 = s1 + s2 + s3;
             for(int i=0;i<vectNormal.size();i++)
 			{
 				if(vectVertex[i]==s4){posv=i+1;}
