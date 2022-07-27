@@ -4,6 +4,7 @@
 #include "facet.h"
 #include "normal.h"
 #include "vertex.h"
+#include "read.h"
 
 using namespace std;
 ofstream of("cube.obj");
@@ -11,10 +12,10 @@ ofstream of("cube.obj");
 int main()
 {
     vertex vertexObj;
-    vertexObj.readVertex();
+   readVertexAndNormal(vertexObj.vectVertex,"vertex");
 
     Normal normalObj;
-    normalObj.readNormal();
+   readVertexAndNormal(normalObj.vectNormal,"normal");
 
     facet facetObj;
     facetObj.readFacet();

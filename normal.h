@@ -10,12 +10,12 @@ public:
     double x, y, z;
     vector<double> vectNormal;
     int normalPos = 0;
-    void readNormal();
+  //  void readNormal();
     void writeNormal(ofstream&);
-    void pushElement(vector<double> &vect1,double x,double y,double z);
+   // void pushElement(vector<double> &vect1,double x,double y,double z);
 } ;
 
-
+/*
 void Normal :: pushElement(vector<double> &vect1,double x,double y,double z)
 {
     vect1.push_back(x);
@@ -57,7 +57,7 @@ void Normal::readNormal()
         if_obj >> s;
     }
 }
-
+*/
 void Normal::writeNormal(ofstream& of)
 {
     
